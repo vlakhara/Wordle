@@ -1,0 +1,105 @@
+.howToPlay {
+  position: absolute;
+  height: 90vh;
+  width: 30rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(116, 114, 114);
+  background-color: #e8d2a6;
+  top: 2rem;
+  right: 2rem;
+  color: #86a3b8;
+  font-weight: 500;
+  animation: slideDown 1s ease-in-out;
+  overflow: scroll;
+}
+
+.mainHeader {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  font-weight: 600;
+}
+.text {
+  font-size: 25px;
+}
+.close {
+  cursor: pointer;
+  transition: transform 0.9s ease-in-out;
+}
+.close:hover {
+  transform: scale(1.1);
+}
+.body {
+  width: 85%;
+  margin: auto;
+}
+.footer {
+  width: 85%;
+  margin: auto;
+}
+.textExp {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.example > span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.correct {
+  background-color: #f55050;
+  color: #e8d2a6;
+  border: none !important;
+  height: 2.6rem !important;
+  width: 2.6rem !important;
+}
+.example > span > div {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 0.1rem solid #86a3b8;
+  margin: 0.2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.example > p {
+  margin-top: 0.2rem;
+  margin-left: 0.3rem;
+}
+.available {
+  background-color: #698269;
+  color: #e8d2a6;
+  border: none !important;
+  height: 2.6rem !important;
+  width: 2.6rem !important;
+}
+.wrong {
+  background-color: #d61355;
+  color: #e8d2a6;
+  border: none !important;
+  height: 2.6rem !important;
+  width: 2.6rem !important;
+}
+
+@keyframes slideDown {
+  from {
+    right: -30rem;
+  }
+  to {
+    right: 2rem;
+  }
+}
+@keyframes slideBack {
+  from {
+    right: 2rem;
+  }
+  to {
+    right: -30rem;
+  }
+}
