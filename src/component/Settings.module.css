@@ -1,0 +1,52 @@
+.settings {
+  position: absolute;
+  width: 24rem;
+  max-width: calc(100vw - 4rem);
+  padding-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(116, 114, 114);
+  background-color: #e8d2a6;
+  top: 2rem;
+  right: 2rem;
+  color: #86a3b8;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.header {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.close {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close:hover {
+  transform: scale(1.1);
+}
+
+.section {
+  width: 85%;
+  margin: 0 auto 1rem;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.hint {
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0;
+}

@@ -2,6 +2,8 @@
   position: absolute;
   height: 90vh;
   width: 30rem;
+  max-width: calc(100vw - 4rem);
+  z-index: 10;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgb(116, 114, 114);
   background-color: #e8d2a6;

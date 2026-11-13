@@ -1,14 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+:root {
+  --bg: #86a3b8;
+  --cream: #e8d2a6;
+  --correct: #f55050; /* right letter, right place */
+  --present: #698269; /* right letter, wrong place */
+  --absent: #d61355; /* letter not in the word */
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #86a3b8;
+  background-color: var(--bg);
+  margin: 0;
 }
+
 .prevent-select {
   user-select: none;
   position: relative;
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--cream);
+}
+
+.statusBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.2rem;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.timeLow {
+  color: #ffffff;
+  font-weight: 700;
+  animation: blink 1s ease-in-out infinite;
+}
+
+.toastSpace {
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast {
+  background-color: var(--cream);
+  color: var(--bg);
+  padding: 0.3rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.hintSlots {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+}
+
+.slotRevealed {
+  color: #ffffff;
+}
+
+.actionButton {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--cream);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.result {
+  text-align: center;
+  max-width: 24rem;
+  padding: 0 1rem;
+}
+
+.resultTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+
 ::-webkit-scrollbar {
   display: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
 }

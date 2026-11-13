@@ -1,0 +1,62 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 1rem 0;
+}
+
+.row {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.tile {
+  --size: min(3.4rem, calc((100vw - 2rem) / var(--len) - 0.4rem));
+  width: var(--size);
+  height: var(--size);
+  box-sizing: border-box;
+  border: 0.12rem solid var(--cream);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: calc(var(--size) * 0.5);
+  color: var(--cream);
+  text-transform: uppercase;
+}
+
+.filled {
+  border-color: #ffffff;
+  animation: pop 0.12s ease-in-out;
+}
+
+.correct {
+  background-color: var(--correct);
+  border-color: transparent;
+}
+
+.present {
+  background-color: var(--present);
+  border-color: transparent;
+}
+
+.absent {
+  background-color: var(--absent);
+  border-color: transparent;
+}
+
+.locked {
+  border-style: dashed;
+  opacity: 0.35;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}

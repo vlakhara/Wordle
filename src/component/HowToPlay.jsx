@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./HowToPlay.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 const HowToPlay = ({ onClick }) => {
@@ -9,17 +9,32 @@ const HowToPlay = ({ onClick }) => {
         <CloseIcon className={style.close} onClick={onClick} />
       </div>
       <div className={style.body}>
-        <p> &gt; You need to guess the wordle in given tries.</p>
+        <p> &gt; Guess the hidden word before you run out of tries.</p>
         <p>
-          &gt; Each guess will be a some characters long word which is the
-          Wordle of the day ( The length of the wordle can be decided by the
-          text fields ).
+          &gt; Every guess must have the same number of letters as the hidden
+          word. Type it and press Enter.
         </p>
         <p>
-          &gt; You will get different number of chances for different length of
-          wordle
+          &gt; Pick a length from 4 to 8 letters in settings. Longer words get
+          more tries: the number of tries is the length plus one.
         </p>
-        <p>&gt; You can change the wordle length in settings.</p>
+        <p>
+          &gt; Daily mode gives one word per day for each length, the same for
+          everyone. Practice mode gives random words, as many games as you
+          like.
+        </p>
+        <p>
+          &gt; Timer (optional): you get 30 seconds per try. The clock starts
+          at your first letter, and if it runs out you lose.
+        </p>
+        <p>
+          &gt; Hints: use up to 2 per game. Each hint reveals one letter in its
+          place, and uses up one of your tries.
+        </p>
+        <p>
+          &gt; If you use a letter more times than it appears in the word, the
+          extra copies show as not in the word.
+        </p>
       </div>
       <div className={style.footer}>
         <p className={style.textExp}>Example:</p>
@@ -42,7 +57,7 @@ const HowToPlay = ({ onClick }) => {
                 <p>T</p>
               </div>
             </span>
-            <p>A is in the word and is on the correct place.</p>
+            <p>R is in the word and is in the correct place.</p>
           </div>
           <div className={style.example}>
             <span>
@@ -62,7 +77,7 @@ const HowToPlay = ({ onClick }) => {
                 <p>T</p>
               </div>
             </span>
-            <p>L is in the word but the position is wrong.</p>
+            <p>H is in the word but the position is wrong.</p>
           </div>
           <div className={style.example}>
             <span>
